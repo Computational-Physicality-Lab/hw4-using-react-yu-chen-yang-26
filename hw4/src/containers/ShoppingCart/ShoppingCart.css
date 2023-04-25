@@ -1,0 +1,128 @@
+.cart{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    margin-bottom: 2vmin;
+}
+.cart-header{
+    text-align: left;
+    font-size: 5vmin;
+    margin-top: 3vmin;
+}
+.cart-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+}
+.cart-content{
+    width: 70%;
+}
+.cart-info{
+    margin-top: 3vmin;
+    width: 30%;
+    margin-left: 4vmin;
+}
+.cart-details{
+    margin-top: 5vmin;
+    border-top: 1px solid #c51230;
+}
+.cart-shirt-name{
+    padding: 1vmin;
+    font-size: 4vmin;
+    color: #9a9697;
+}
+.cart-shirt{
+    margin-top: 1vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.cart-shirt-pic{
+    height: 50vmin;
+}
+.cart-shirt-info{
+    margin-left: 2vmin;
+}
+.cart-shirt-info-item{
+    margin-top: 5vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.cart-shirt-rowname{
+    font-size: 2.5vmin;
+    color: #9a9697;
+}
+.cart-shirt-text{
+    margin-left: 1vmin;
+    font-size: 2.5vmin;
+    color: #c51230;
+}
+.remove{
+    width: 15vmin;
+    height: 5vmin;
+    margin-top: 5vmin;
+    font-size: 2.5vmin;
+    border: none;
+    border-radius: 4px;
+    background-color: #c51230;
+    color: white;
+    cursor: pointer;
+}
+.remove:hover{
+    background-color: #dc5d72;
+}
+.cart-order{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    padding: 2vmin;
+    border: 1px solid #c51230;
+    border-radius: 4px;
+}
+.cart-order-header{
+    font-size: 3vmin;
+    margin-bottom: 2vmin;
+}
+.cart-order-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vmin;
+}
+.cart-order-rowname{
+    color: #9a9697;
+}
+.cart-order-text{
+    color: #c51230;
+}
+.checkout, .continue{
+    border: none;
+    border-radius: 4px;
+    background-color: #c51230;
+    color: white;
+    cursor: pointer;
+    width: 25vmin;
+    height: 5vmin;
+    margin-top: 5vmin;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.checkout:hover, .continue:hover{
+    background-color: #dc5d72;
+}
+.cart-empty-header{
+    font-size: 10vmin;
+    margin-top: 3vmin;
+    margin-bottom: 3vmin;
+}
