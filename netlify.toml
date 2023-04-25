@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish="hw4/build"
+  base = "hw4"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
