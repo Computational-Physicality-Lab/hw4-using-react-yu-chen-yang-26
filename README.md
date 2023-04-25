@@ -1,3 +1,17 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/wH3jFylN)
 # hw4-using-react
-This is the starter code of [2023-Programming User Interface Homework](https://hackmd.io/@akairisu/ByGFeGdZh)
+- 姓名：楊于晨
+- 你 deploy 的網站連結
+    - https://subtle-croissant-13dd7b.netlify.app
+    - 建議用google chrome開啟
+- 你所實作的加分作業項目，以及如何觸發它
+    - 目前無實作加分項目，僅實作RWD的部分
+- 在前述可任意實作的情況下，你設計的行為，e.g.當使用者離開產品詳細資訊頁面又回來時、當使用者關閉網頁又重開時、當使用者開啟複數網頁時等等
+    - 當使用者離開產品詳細資訊頁面又回來時，會將正反面、顏色、數量與尺寸重新設定為預設值，但購物車相關資訊並不會受到影響
+    - 當使用者關閉網頁又重開時，則購物車會清空
+    - 當使用者開啟複數網頁時，每個網頁會獨立紀錄該分頁的狀態
+- 重要：請討論使用 React 實作與作業一中使用純 html/css/JavaScript 實作有何不同。哪一個比較方便與為什麼？哪一個比較容易理解如何操作與為什麼？哪一個在實作同一個頁面時需要撰寫更多程式碼？
+    - 我認為使用 React 撰寫網頁較為便利，由於 React 擁有 useState, useEffect 以及 props等資源方便我們管理並使用變數，相較於純 HTML/CSS/JavaScript，開發者可能需要手動處理 DOM 操作和事件處理等，React 整體來說更加方便管理與維護。
+    - 在理解操作的部分，由於需要模組化的觀念並重新認識一些 js 觀念，React 可能較難入門，相比之下，純 html/css/JavaScript 就相當直觀。
+    - 我認為使用 React 撰寫網頁可以大量節省程式碼，由於 React 可以將每個網頁元素模組化為 js 檔，提供開發者重複使用，進而減少相同的程式碼散落於不同 html 檔中的情形。
+- 其他你所實作的網站的有趣之處
+    - 目前僅實作 RWD，其餘無特別有趣之處
