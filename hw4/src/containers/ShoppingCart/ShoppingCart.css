@@ -114,6 +114,11 @@
     border: 1px solid #c51230;
     border-radius: 4px;
 }
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media(max-width:1600px){
     .cart-order-header{
         font-size: 3vmin;
@@ -133,7 +138,6 @@
         color: #c51230;
     }
     .checkout, .continue{
-        z-index: -1;
         border: none;
         border-radius: 4px;
         background-color: #c51230;
@@ -142,9 +146,6 @@
         width: 25vmin;
         height: 6vmin;
         margin-top: 5vmin;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
     }
 }
 @media(max-width:768px){

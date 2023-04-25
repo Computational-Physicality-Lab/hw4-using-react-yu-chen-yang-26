@@ -108,25 +108,29 @@ const ShoppingCart = ({ cart, setCart }) => {
                 ${(subtotal + 6.95).toFixed(2)}
               </div>
             </div>
-            {cart.length === 0 ? (
-              <button
-                className="checkout"
-                style={{ opacity: "40%", pointerEvents: "none" }}
-              >
-                Sign in and Checkout
-              </button>
-            ) : (
-              <button
-                className="checkout"
-                onClick={() => navigate("/not_implemented")}
-              >
-                Sign in and Checkout
-              </button>
-            )}
+            <div className="button-container">
+              {cart.length === 0 ? (
+                <button
+                  className="checkout"
+                  style={{ opacity: "40%", pointerEvents: "none" }}
+                >
+                  Sign in and Checkout
+                </button>
+              ) : (
+                <button
+                  className="checkout"
+                  onClick={() => navigate("/not_implemented")}
+                >
+                  Sign in and Checkout
+                </button>
+              )}
+            </div>
           </div>
-          <button className="continue" onClick={() => navigate("/products")}>
-            Continue Shopping
-          </button>
+          <div className="button-container">
+            <button className="continue" onClick={() => navigate("/products")}>
+              Continue Shopping
+            </button>
+          </div>
         </div>
       </div>
     </div>
