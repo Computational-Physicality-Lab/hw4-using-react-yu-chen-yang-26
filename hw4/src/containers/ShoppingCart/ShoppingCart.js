@@ -7,6 +7,9 @@ const ShoppingCart = ({ cart, setCart }) => {
   const [subtotal, setSubtotal] = useState(0);
   const [number, setNumber] = useState(0);
   const navigate = useNavigate();
+  const numberArray = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  ];
   const clickRemove = (id) => {
     setCart(cart.filter((item) => item.id !== id));
   };
@@ -15,16 +18,23 @@ const ShoppingCart = ({ cart, setCart }) => {
     var number = 0;
     for (let index = 0; index < cart.length; index++) {
       const element = cart[index];
-      total = total + parseFloat(element.price.replace("$", ""));
-      number = number + parseInt(element.quantity);
+      total = total + element.price * element.quantity;
+      number = number + element.quantity;
     }
     setSubtotal(total);
     setNumber(number);
   }, [cart]);
+  const changeQuantity = (id, quantity) => {
+    const item = cart.filter((item) => item.id === id);
+    const index = cart.indexOf(item[0]);
+    let tempCart = [...cart];
+    tempCart[index].quantity = parseInt(quantity);
+    setCart(tempCart);
+  };
   return (
     <div className="cart">
       <div className="cart-header">
-        {cart.length === 0 ? "Your Cart is Empty" : "My Cart " + number}
+        {cart.length === 0 ? "Your Cart is Empty" : "My Cart (" + number + ")"}
       </div>
       <div className="cart-body">
         <div className="cart-content">
@@ -41,7 +51,20 @@ const ShoppingCart = ({ cart, setCart }) => {
                 <div className="cart-shirt-info">
                   <div className="cart-shirt-info-item">
                     <div className="cart-shirt-rowname">Quantity: </div>
-                    <div className="cart-shirt-text">{item.quantity}</div>
+                    <select
+                      className="cart-shirt-quantity"
+                      defaultValue={item.quantity}
+                      onChange={(e) => changeQuantity(item.id, e.target.value)}
+                    >
+                      {numberArray.map((i) => {
+                        return (
+                          <option value={i} key={i}>
+                            {i}
+                          </option>
+                        );
+                      })}
+                    </select>
+                    {/* <div className="cart-shirt-text">{item.quantity}</div> */}
                   </div>
                   <div className="cart-shirt-info-item">
                     <div className="cart-shirt-rowname">Color: </div>
@@ -53,7 +76,9 @@ const ShoppingCart = ({ cart, setCart }) => {
                   </div>
                   <div className="cart-shirt-info-item">
                     <div className="cart-shirt-rowname">Price: </div>
-                    <div className="cart-shirt-text">{item.price}</div>
+                    <div className="cart-shirt-text">
+                      ${(item.price * item.quantity).toFixed(2)}
+                    </div>
                   </div>
                   <button
                     className="remove"

@@ -36,26 +36,63 @@
     font-size: 4vmin;
     color: #9a9697;
 }
-.cart-shirt{
-    margin-top: 1vmin;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
+@media(max-width:1600px){
+    .cart-shirt{
+        margin-top: 1vmin;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+    }
+    .cart-shirt-info-item{
+        margin-top: 5vmin;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .remove{
+        width: 15vmin;
+        height: 5vmin;
+        margin-top: 5vmin;
+        font-size: 2.5vmin;
+        border: none;
+        border-radius: 4px;
+        background-color: #c51230;
+        color: white;
+        cursor: pointer;
+    }
+}
+@media(max-width:768px){
+    .cart-shirt{
+        margin-top: 1vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+    }
+    .cart-shirt-info-item{
+        margin-top: 1vmin;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .remove{
+        margin-top: 1vmin;
+    }
 }
 .cart-shirt-pic{
     height: 50vmin;
 }
+.cart-shirt-quantity{
+    margin-left: 1vmin;
+    width: 10vmin;
+}
 .cart-shirt-info{
     margin-left: 2vmin;
 }
-.cart-shirt-info-item{
-    margin-top: 5vmin;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-}
+
 .cart-shirt-rowname{
     font-size: 2.5vmin;
     color: #9a9697;
@@ -64,17 +101,6 @@
     margin-left: 1vmin;
     font-size: 2.5vmin;
     color: #c51230;
-}
-.remove{
-    width: 15vmin;
-    height: 5vmin;
-    margin-top: 5vmin;
-    font-size: 2.5vmin;
-    border: none;
-    border-radius: 4px;
-    background-color: #c51230;
-    color: white;
-    cursor: pointer;
 }
 .remove:hover{
     background-color: #dc5d72;
@@ -88,36 +114,61 @@
     border: 1px solid #c51230;
     border-radius: 4px;
 }
-.cart-order-header{
-    font-size: 3vmin;
-    margin-bottom: 2vmin;
+@media(max-width:1600px){
+    .cart-order-header{
+        font-size: 3vmin;
+        margin-bottom: 2vmin;
+    }
+    .cart-order-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1vmin;
+    }
+    .cart-order-rowname{
+        color: #9a9697;
+    }
+    .cart-order-text{
+        color: #c51230;
+    }
+    .checkout, .continue{
+        z-index: -1;
+        border: none;
+        border-radius: 4px;
+        background-color: #c51230;
+        color: white;
+        cursor: pointer;
+        width: 25vmin;
+        height: 6vmin;
+        margin-top: 5vmin;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
-.cart-order-item{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1vmin;
+@media(max-width:768px){
+    .cart-order-header{
+        font-size: 2vmin;
+        margin-bottom: 1vmin;
+    }
+    .cart-order-item{
+        margin-bottom: 0.5vmin;
+    }
+    .cart-order-rowname{
+        font-size: 1vmin;
+    }
+    .cart-order-text{
+        font-size: 1vmin;
+    }
+    .checkout, .continue{
+        font-size: 1vmin;
+        width: 20vmin;
+        height: 6vmin;
+        margin-top: 3vmin;
+    }
 }
-.cart-order-rowname{
-    color: #9a9697;
-}
-.cart-order-text{
-    color: #c51230;
-}
-.checkout, .continue{
-    border: none;
-    border-radius: 4px;
-    background-color: #c51230;
-    color: white;
-    cursor: pointer;
-    width: 25vmin;
-    height: 5vmin;
-    margin-top: 5vmin;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
 .checkout:hover, .continue:hover{
     background-color: #dc5d72;
 }

@@ -44,10 +44,10 @@ const Details = ({ cart, setCart, index, setIndex }) => {
         id: index,
         name: realName,
         color: color,
-        quantity: quantity,
+        quantity: parseInt(quantity),
         size: size,
         src: item.colors[color]["front"],
-        price: item.price,
+        price: parseFloat(item.price.replace("$", "")),
       },
     ]);
     setIndex(index + 1);

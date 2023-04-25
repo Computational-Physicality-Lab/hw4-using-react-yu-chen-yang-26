@@ -55,6 +55,8 @@
 .header-menu-item{
     width: 20%;
     font-size: 2vmin;
+    border-top: 1vmin solid white;
+    border-bottom: 1vmin solid white;
     font-family: "Catamaran";
     color: #ce818e;
     text-align: center;
